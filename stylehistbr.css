@@ -1,0 +1,841 @@
+body {
+  font-family: "Satoshi Variable-Medium", Helvetica;
+  font-weight: Medium;
+  background-color: #1e1e1e;
+  color:#d9d9d9;
+  padding: 0px;
+  flex: 1;
+ overflow-x: hidden;
+  
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+.logo {
+    font-size: 35px;
+     color: #d9d9d9;
+}
+.brasil{
+  font-family:"Clash Display Variable-Bold", Helvetica;
+  font-weight: bold;
+  
+}
+.sessenta {
+  font-family: 'Clash Display Variable-Regular', Helvetica;
+  font-weight: regular;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+ 
+}
+
+.nav-links.active {
+  display: flex;
+}
+.nav-links li {
+   margin-left: 15px;
+   position: relative;
+}
+
+.nav-links li a {
+    color:#d9d9d9;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1.5px solid #d9d9d9;
+    border-radius: 35px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: "Satoshi Variable-Medium", Helvetica;
+}
+
+.nav-links li a:hover {
+  border-radius: 15px;
+    background-color: #d9d9d9;
+    color:#1e1e1e
+    
+  }
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  text-transform: center;
+  text-align: center;
+  transform: translateX(-50%);
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  min-width: 145px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+.dropdown-menu li {
+  width: 100%;
+}
+.dropdown-menu li a {
+  padding: 10px 20px;
+  left: 50%;
+  transform: translateX(-10%);
+  color: #1e1e1e;
+  border: none;
+  border-radius: 0;
+background-color: transparent;
+background: none;
+  display: block;
+  text-align:center;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+ background: none;
+  color: #1e1e1e;
+  text-decoration: underline;
+  border-radius: 0;
+  border: none;
+  
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Fora da tela inicialmente */
+  width: 300px;
+  height: 80%;
+  background-color: #1e1e1e;
+  color: #1e1e1e;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  padding: 20px;
+  z-index: 1; 
+}
+
+/* Links principais */
+.side-menu .nav-links2 > li > a {
+  display: block;
+  padding: 10px 0;
+  color: #EEEDF2;
+  text-decoration: none;
+  font-size: 22px;
+  z-index: 1;
+  position: relative;
+  line-height: 3px;
+  left: -6vw; top: -2vw;
+  font-family: "Satoshi Variable-Medium", Helvetica;
+}
+
+
+/* Estilo para sublinks */
+.side-menu .sub-links {
+  list-style: none;
+  padding-left: 20px; /* Indenta os sublinks */
+  margin: 10px 0 0;
+}
+.side-menu .nav-links2 > li > a:hover{
+  color: #555;
+}
+.side-menu .sub-links li a {
+  display: block;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #d9d9d9; /* Diferencia a cor dos sublinks */
+  text-decoration: none;
+  position: relative;
+  left: -10vw;
+  top: vw;
+  font-family: "Satoshi Variable-Medium", Helvetica;
+}
+
+.side-menu .sub-links li a:hover {
+  color: #555; /* Destaque ao passar o mouse */
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-links2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20vw;
+    right: 30px;
+
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  
+  .nav-links li a {
+    text-align: center;
+    width: 100%;
+}
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ .banner1 {
+  width: 100vw;
+height: 45vw;
+position: relative;
+top: -1vw;
+left: -7vw;
+}
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+
+ .texto-1{
+  color: #FFF;
+font-family: "Clash Display Variable-Bold";
+font-size: 5vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+position: relative;
+left: 15vw;
+top: 16vw;
+}
+
+@media (max-width: 768px){
+    .texto-1 {font-size: 24px;}
+   .rectangle-1{max-width:520px;
+    max-height: 160px; }
+
+    
+}
+@media (max-width: 768px){
+  .texto-2 {font-size: 22px;}
+}
+
+/* Cabeçalho do side menu */
+.side-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc; /* Linha separadora */
+}
+
+/* Botão de voltar */
+.back-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Seta antes do texto no botão de voltar */
+.back-button span {
+  margin-right: 5px; /* Espaço entre a seta e o texto */
+}
+
+/* Botão de voltar ao passar o mouse */
+.back-button:hover {
+  color: #555;
+}
+
+/* Imagem do lado direito */
+.side-menu-logo {
+  max-width: 50px;
+  height: auto;
+  border-radius: 50%; /* Opcional: para imagem circular */
+  margin-left: 20px; /* Espaço entre botão e imagem */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ .banner1 {
+  width: 100vw;
+height: 45vw;
+position: relative;
+top: -1vw;
+left: -7vw;
+}
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+
+ .texto-1{
+  color: #FFF;
+font-family: "Clash Display Variable-Bold";
+font-size: 5vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+position: relative;
+left: 15vw;
+top: 16vw;
+}
+
+@media (max-width: 768px){
+    .texto-1 {font-size: 40px;}
+   .rectangle-1{max-width:520px;
+    max-height: 160px; }
+   .contexto .texto-4 , .golpe .texto-6 , .cultural .texto-8 , .design .texto-10 , .conclusao .texto-12{ font-size: 15px;}
+
+    
+}
+@media (max-width: 768px){
+  .texto-2 {font-size: 35px;}
+  .contexto .texto-3 , .golpe .texto-5 {font-size: 28px; top: -1vw;}
+  .cultural .texto-7 {font-size: 28px; top: 38px; }
+  .conclusao .texto-11 , .design .texto-9{ font-size: 32px;}
+
+}
+
+
+
+ .rectangle-1{
+  width: 60vw;
+height: 11vw;
+flex-shrink: 0;
+border-radius: 50px;
+background: #D95BB7;
+position: relative;
+left: -10vw;
+top: 17vw;
+}
+
+ .texto-2{
+  color: var(--branco, #EEEDF2);
+font-family: "Clash Display Variable-Medium";
+font-size: 4vw;
+font-style: normal;
+font-weight: 100;
+line-height: normal;
+position: relative;
+left: 15vw;
+top: 9vw;
+}
+
+
+
+
+  
+
+          
+ .patern-1{
+  width: 29vw;
+height: 14vw;
+flex-shrink: 0;
+position: relative;
+left: 70vw;
+top: -27vw;
+}
+
+ .foto-1{
+  width: 49vw;
+height: 25vw;
+flex-shrink: 0;
+border-radius: 50px;
+position: relative;
+left: -15vw;
+top: 18vw;
+}
+
+.contexto {
+  display: flex;
+   flex-direction: column;
+   position: relative;
+   top: 21vw
+   ;
+   left: 8vw;
+
+}
+ .texto-3{
+  color: #FFF;
+  font-family: "Clash Display Variable-Semibold";
+
+font-size: 5vw;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+width: 48vw;
+height: 5vw;
+position: relative;
+left: 6vw;
+top: 2vw;
+}
+
+ .vector-1{
+  width: 12vw;
+height: 10vw;
+  position: relative;
+  left: 71vw;
+  top: -7vw;
+}
+
+ .texto-4{
+  color: #FFF;
+font-family: "Satoshi Variable-Regular";
+font-size: 1.5vw;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 64vw;
+position: relative;
+top: -5vw;
+left: 6vw;
+}
+
+ .texto-5{
+  color: #FFF;
+  font-family: "Clash Display Variable-Semibold";
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 48vw;
+  height: 5vw;
+  flex-shrink: 0;
+  position: relative;
+  left: 6vw;
+  top: 1vw;
+}
+
+ .data-1{
+  color: #FFF;
+font-family: "Clash Display Variable-Bold";
+font-size: 3vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+position: relative;
+top: 10vw;
+left: 6vw;
+
+}
+
+ .vector-2{
+  width: 15vw;
+  height: 12vw;
+    position: relative;
+    left: 14vw;
+    top: 9vw;
+}
+
+ .texto-6{
+  color: #FFF;
+  font-family: "Satoshi Variable-Regular";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 64vw;
+  position: relative;
+  top: 20vw;
+  left: 6vw;
+}
+
+ .foto-2{
+  width: 34vw;
+height: 22vw;
+flex-shrink: 0;
+border-radius: 50px;
+position: relative;
+background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+top: 15vw;
+left: 6vw;
+}
+
+.cultural{
+  display: flex;
+   flex-direction: column;
+   position: relative;
+   top: 14vw;
+   left: 0vw;
+}
+
+ .texto-7{
+  color: #FFF;
+  font-family: "Clash Display Variable-Semibold";
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 48vw;
+  height: 5vw;
+  flex-shrink: 0;
+  position: relative;
+  left: 6vw;
+  top: 14vw;
+}
+
+.vector-3{
+  width: 12vw;
+  height: 10vw;
+    position: relative;
+    left: 65vw;
+    top: 6vw;
+}
+
+ .texto-8{
+  color: #FFF;
+  font-family: "Satoshi Variable-Regular";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 64vw;
+  position: relative;
+  top: 9vw;
+  left: 6vw;
+}
+
+.design{
+  display: flex;
+   flex-direction: column;
+   position: relative;
+   top: 25vw;
+   left: 0vw;
+}
+
+.texto-9{
+  color: #FFF;
+  font-family: "Clash Display Variable-Semibold";
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 48vw;
+  height: 5vw;
+  flex-shrink: 0;
+  position: relative;
+  top: -10vw;
+  left: 6vw;
+}
+
+ .texto-10{
+  color: #FFF;
+  font-family: "Satoshi Variable-Regular";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 64vw;
+  position: relative;
+  top: -9vw;
+  left: 6vw;
+  margin-bottom: 1vw;
+}
+
+ .vector-4{
+  width: 12vw;
+  height: vw;
+    position: relative;
+    left: 65vw;
+    top: -14vw;
+}
+
+.conclusao{
+  display: flex;
+   flex-direction: column;
+   position: relative;
+   top: 8vw;
+   left: 0vw;
+
+}
+
+ .texto-11{
+  color: #FFF;
+  font-family:"Clash Display Variable-Semibold"; 
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 48vw;
+  height: 5vw;
+  flex-shrink: 0;
+  position: relative;
+  left: 6vw;
+  top: -6vw;
+}
+
+ .vector-5{
+  width: 12vw;
+  height: vw;
+    position: relative;
+    left: 65vw;
+    top: -13vw;
+}
+
+ .texto-12{
+  color: #FFF;
+  font-family: "Satoshi Variable-Regular";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 64vw;
+  position: relative;
+  top: -10vw;
+  left: 6vw;
+  margin-bottom: 1vw;
+}
+
+  .fim{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 5vw;
+    left: -10vw;
+ 
+  }
+
+   .rodape{
+    width: 120vw;
+height: 29vw;
+flex-shrink: 0;
+position: relative;
+top: 14vw;
+   }
+   @media (max-width: 768px){
+    .rodape{width: 34vw; height: 14vw;
+    }
+  }
+
+
+   .barra{
+    width: 116vw;
+height: 20vw;
+flex-shrink: 0;
+position: relative;
+top: 3vw;
+  }
+
+  .footer {
+    
+    color: #ffffff;
+    padding: 1vw 0;
+    padding-left: 7vw;
+    position: relative;
+    top: -8vw;
+    font-size: 1.5vw;
+    font-weight: 2vw
+    ;
+    font-family: "Satoshi Variable-Regular";
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: left; 
+    align-items: left;
+   }
+  
+  .info-section, .help-section {
+    flex: 1;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 8px 0;
+  }
+  
+  ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  body {
+    font-family: 'Clash Display Variable-Regular', Helvetica;
+    font-weight: regular;
+    font-size: 21px;
+    top: 105px;
+  }
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* Alinha os itens em uma coluna */
+      align-items: left; /* Centraliza os itens */
+      text-align: center; /* Centraliza o texto */
+      position: relative;
+      top: -10vw;
+    }
+  
+    .info-section, .help-section {
+      min-width: 100%; /* As seções ocupam toda a largura */
+      margin-bottom: 20px; /* Espaçamento entre as seções */
+    }
+  
+    .accessibility-icon {
+      margin: 10px auto; /* Centraliza o ícone */
+    }
+    .footer{
+      font-size: 12px;
+    }
+    .rodape{
+      position: relative;
+      top: 60vw;
+      left: 2vw;
+      width: 100%;
+      height: 60%;
+    }
+  
+    .barra{
+      width: 100%;
+    }
+  }
+ 
+  
+  
+  @media screen and (max-width: 768px){
+    .container{
+      display: block;
+    }
+
+    .container__imagem{
+      width: 50vw;
+    }
+
+    .container__caixa{
+      margin: 2em 2em;
+    }
+  }
+
+  @media (max-width: 768px){
+    .foto-1 {
+      max-width: 100%;
+      left: auto;
+    }
+
+    
+    .texto-3 {
+      
+      display: block;
+      
+      
+      max-width: fit-content;
+    }
+
+    .texto-4{
+      font-size: 20px;
+      display: block;
+     
+    }
+  }
+
+  .accessibility-buttons {
+    position: fixed;
+    top: 20%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  .accessibility-buttons button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+  }
+  
+  .accessibility-buttons button:hover {
+    background-color: #0056b3;
+  }
+  @media (max-width: 768px) {
+  .accessibility-buttons {
+      top: auto;
+      bottom: 20px;
+      right: 10px;
+      flex-direction: row;
+      justify-content: center;
+  }
+  
+  .accessibility-buttons button {
+      padding: 8px;
+      font-size: 14px;
+  }
+  }
+  
+  /* Responsividade para telas muito pequenas (celulares) */
+  @media (max-width: 480px) {
+  .accessibility-buttons {
+      bottom: 10px;
+      right: 5px;
+      gap: 5px;
+  }
+  
+  .accessibility-buttons button {
+      padding: 6px;
+      font-size: 12px;
+  }
+}

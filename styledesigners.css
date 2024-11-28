@@ -1,0 +1,687 @@
+.home {
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-x: hidden;
+  }
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  
+  body {
+      font-family: "Satoshi Variable-Medium", Helvetica;
+      font-weight: Medium;
+      background-color: #1e1e1e;
+      color:#d9d9d9;
+  }
+  
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 99%;
+      padding: 20px;
+      background-color: #1e1e1e;
+  }
+  
+  .logo {
+      font-size: 35px;
+       color: #d9d9d9;
+  }
+  .brasil{
+    font-family:"Clash Display Variable-Bold", Helvetica;
+    font-weight: bold;
+    
+  }
+  .sessenta {
+    font-family: 'Clash Display Variable-Regular', Helvetica;
+    font-weight: regular;
+  }
+  
+  .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+   
+  }
+  .nav-links li {
+     margin-left: 15px;
+     position: relative;
+  }
+
+
+.nav-links.active {
+  display: flex;
+}
+
+
+  .nav-links li a {
+      color:#d9d9d9;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1.5px solid #d9d9d9;
+      border-radius: 35px;
+      font-size: 16px;
+      transition: background-color 0.3s, color 0.3s;
+      font-family: "Satoshi Variable-Medium", Helvetica;
+  }
+  
+  .nav-links li a:hover {
+    border-radius: 15px;
+      background-color: #d9d9d9;
+      color:#1e1e1e
+      
+    }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    text-transform: center;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    z-index: 10;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    min-width: 145px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  .dropdown-menu li {
+    width: 100%;
+  }
+  .dropdown-menu li a {
+    padding: 10px 20px;
+    left: 50%;
+    transform: translateX(-10%);
+    color: #1e1e1e;
+    border: none;
+    border-radius: 0;
+  background-color: transparent;
+  background: none;
+    display: block;
+    text-align:center;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu li a:hover {
+   background: none;
+    color: #1e1e1e;
+    text-decoration: underline;
+    border-radius: 0;
+    border: none;
+    
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Fora da tela inicialmente */
+    width: 300px;
+    height: 80%;
+    background-color: #1e1e1e;
+    color: #1e1e1e;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1; 
+  }
+  
+  /* Links principais */
+  .side-menu .nav-links2 > li > a {
+    display: block;
+    padding: 10px 0;
+    color: #EEEDF2;
+    text-decoration: none;
+    font-size: 22px;
+    z-index: 1;
+    position: relative;
+    line-height: 3px;
+    left: -6vw; top: -2vw;
+    font-family: "Satoshi Variable-Medium", Helvetica;
+  }
+  
+  
+  /* Estilo para sublinks */
+  .side-menu .sub-links {
+    list-style: none;
+    padding-left: 20px; /* Indenta os sublinks */
+    margin: 10px 0 0;
+  }
+  .side-menu .nav-links2 > li > a:hover{
+    color: #555;
+  }
+  .side-menu .sub-links li a {
+    display: block;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #d9d9d9; /* Diferencia a cor dos sublinks */
+    text-decoration: none;
+    position: relative;
+    left: -10vw;
+    top: vw;
+    font-family: "Satoshi Variable-Medium", Helvetica;
+  }
+  
+  .side-menu .sub-links li a:hover {
+    color: #555; /* Destaque ao passar o mouse */
+  }
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .nav-links2 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 20vw;
+      right: 30px;
+  
+      width: 200px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    
+    .nav-links li a {
+      text-align: center;
+      width: 100%;
+  }
+  }
+  /* Cabeçalho do side menu */
+.side-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc; /* Linha separadora */
+}
+
+/* Botão de voltar */
+.back-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Seta antes do texto no botão de voltar */
+.back-button span {
+  margin-right: 5px; /* Espaço entre a seta e o texto */
+}
+
+/* Botão de voltar ao passar o mouse */
+.back-button:hover {
+  color: #555;
+}
+
+/* Imagem do lado direito */
+.side-menu-logo {
+  max-width: 50px;
+  height: auto;
+  border-radius: 50%; /* Opcional: para imagem circular */
+  margin-left: 20px; /* Espaço entre botão e imagem */
+}
+  
+
+  .accessibility-buttons {
+    position: fixed;
+    top: 20%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.accessibility-buttons button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+.accessibility-buttons button:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+  .accessibility-buttons {
+      top: auto;
+      bottom: 20px;
+      right: 10px;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .accessibility-buttons button {
+      padding: 8px;
+      font-size: 14px;
+  }
+}
+
+/* Responsividade para telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+  .accessibility-buttons {
+      bottom: 10px;
+      right: 5px;
+      gap: 5px;
+  }
+
+  .accessibility-buttons button {
+      padding: 6px;
+      font-size: 12px;
+  }
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Tema de Alto Contraste */
+.high-contrast {
+    background-color: black;
+    color: white;
+}
+
+.high-contrast a {
+    color: yellow;
+}
+  
+  .titulo-1{
+    color: #FFF;
+font-family: 'Clash Display Variable-Semibold', Helvetica;
+font-size: 3vw;
+font-style: SemiBold;
+font-weight: 600;
+line-height: normal;
+position: relative;
+width: 45vw;
+left: 10vw;
+top: 5vw;
+  }
+
+  .titulo-2{
+    color: #FFF;
+    font-family:  'Clash Display Variable-Regular', Helvetica;
+    font-size: 3vw;
+    font-style: regular
+    ;
+    font-weight: 300;
+    line-height: normal;
+    position: relative;
+    width: 45vw;
+    left: 10vw;
+    top: 8vw;
+  }
+
+  .vector-1{
+    width: 9w;
+    height: 12vw;
+    position: relative;
+    left: 74vw;
+    top: -4vw;
+  }
+
+  .joao{
+    width: 93vw;
+    height: 22vw;
+    position: relative;
+    left: -5vw;
+    top: 10vw;width: 93vw;
+    height: 22vw;
+    position: relative;
+    left: -5vw;
+    top: 10vw;
+    
+  }
+
+  .ruben{
+    width:  93vw;
+    height: 22vw;
+    position: relative;
+    left: 15vw;
+    top: 16vw;
+    
+  }
+
+  .alexandre{
+    width:  93vw;
+    height: 22vw;
+    position: relative;
+    left: -5vw;
+    top: 22vw;
+  }
+
+  .rogerio{
+    width:  93vw;
+    height: 22vw;
+    position: relative;
+    left: 15vw;
+    top: 28vw;
+  }
+
+  @media (max-width: 768px) {
+    .joao , .alexandre {
+      width: 120vw; height: 36vw;
+      left: -28vw;
+    }
+    .ruben , .rogerio , .designers .aloisio , .designers .geraldo {
+      width: 120vw; height: 36vw;
+      left: 7vw;
+    }
+    .designers .karl, .designers .emilie {
+      width: 123vw; height: 36vw;
+      left: -30vw;
+    }
+  }
+  .botao-ler-mais {
+    display: inline-block;
+    padding: 0.8vw 2.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff; /* Fundo branco */
+    border-radius: 2vw; /* Bordas arredondadas */
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    top: 23vw;
+    left: 47vw;
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* Sombra ao redor */
+  }
+  
+  .botao-ler-mais a {
+    text-decoration: none;
+    color: #000; /* Cor do texto */
+    font-weight: bold;
+    font-size: 1vw;
+  }
+  
+  .botao-ler-mais:hover {
+    background-color: #1e1e1e; /* Cor de fundo ao passar o mouse */
+    
+  }
+  
+  .botao-ler-mais a:hover {
+    color:#FFF /* Cor do texto ao passar o mouse */
+  }
+  .botao-ler-mais::before,
+.botao-ler-mais::after {
+  content: "⭐";
+  position: absolute;
+  font-size: 1vw;
+  opacity: 0;
+  animation: star-animation 1s infinite ease-in-out;
+}
+
+.botao-ler-mais::before {
+  top: -1vw;
+  left: -1vw;
+}
+
+.botao-ler-mais::after {
+  bottom: -1vw;
+  right: -1vw;
+}
+
+.botao-ler-mais:hover::before {
+  opacity: 1;
+  animation: star-animation 1s infinite ease-in-out;
+}
+
+.botao-ler-mais:hover::after {
+  opacity: 1;
+  animation: star-animation-reverse 1s infinite ease-in-out;
+}
+
+/* Animação para as estrelas */
+@keyframes star-animation {
+  0% {
+    transform: translate(0, 0) scale(0.8);
+  }
+  50% {
+    transform: translate(10px, 10px) scale(1);
+  }
+  100% {
+    transform: translate(20px, 20px) scale(0.8);
+  }
+}
+
+@keyframes star-animation-reverse {
+  0% {
+    transform: translate(0, 0) scale(0.8);
+  }
+  50% {
+    transform: translate(-10px, -10px) scale(1);
+  }
+  100% {
+    transform: translate(-20px, -20px) scale(0.8);
+  }
+}
+@media (max-width: 768px) {
+  .botao-ler-mais {
+    padding: 0vw 2vw; /* Reduz o espaço interno */
+    border-radius: 1.2vw; /* Ajusta o arredondamento */
+    position: relative;
+    top: 21vw;
+  }
+
+  .botao-ler-mais a {
+    font-size: 1vw; /* Reduz o tamanho do texto */
+    position: relative;
+    top: -0.6vw;
+  }
+
+  .botao-ler-mais::before,
+  .botao-ler-mais::after {
+    font-size: 1vw; /* Diminui o tamanho das estrelas */
+  }
+}
+
+/* Para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .botao-ler-mais {
+    padding: 0.5vw 2.1vw; /* Reduz ainda mais o espaço interno */
+    border-radius: 0.7vw; /* Bordas menos arredondadas */
+  }
+
+  .botao-ler-mais a {
+    font-size: 0.8vw; /* Texto ainda menor */
+  }
+
+  .botao-ler-mais::before,
+  .botao-ler-mais::after {
+    font-size: 0.8vw; /* Estrelas menores */
+  }
+}
+
+  .karl{
+    width:  93vw;
+    height: 22vw;
+    position: relative;
+    left: -5vw;
+    top: 34vw; 
+  }
+
+  .aloisio{
+    width:  93vw;
+    height: 22vw;
+    position: relative;
+    left: 15vw;
+    top: 40vw;
+  }
+
+  .emilie{
+    width:  93vw;
+    height: 22vw;
+    position: relative;
+    left: -5vw;
+    top: 46vw; 
+  }
+
+  .geraldo{
+    width:  93vw;
+    height: 22vw;
+    position: relative;
+    left: 15vw;
+    top: 52vw;
+  }
+   
+  .final{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 80vw;
+    left: 0vw;
+ 
+  }
+  .barra{
+    position: relative;
+    top: -4vw;
+  }
+  .footer {
+    
+    color: #ffffff;
+    padding: 20px 0;
+    padding-left: 140px;
+    position: relative;
+    top: 20vw;
+    font-size: 20px;
+    font-weight: 50px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: left; 
+    align-items: left;
+   }
+  
+  .info-section, .help-section {
+    flex: 1;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 8px 0;
+  }
+  
+  ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* Alinha os itens em uma coluna */
+      align-items: center; /* Centraliza os itens */
+      text-align: center; /* Centraliza o texto */
+    }
+    .footer{
+      font-size: 12px;
+      align-items: center;
+      position: relative;
+      left: -12vw;
+      top: -3vw;
+    }
+  
+    .info-section, .help-section {
+      min-width: 100%; /* As seções ocupam toda a largura */
+      margin-bottom: 20px; /* Espaçamento entre as seções */
+    }
+  
+    .accessibility-icon {
+      margin: 10px auto; /* Centraliza o ícone */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h3 {
+      font-size: 1.2em; /* Ajusta o tamanho do título em telas muito pequenas */
+    }
+  
+    ul li a {
+      font-size: 0.9em; /* Reduz o tamanho do texto dos links */
+    }
+  
+    .footer {
+      padding: 10px; /* Reduz o espaçamento geral */
+    }
+  }
+  
+  @media screen and (max-width: 768px){
+    .container{
+      display: block;
+    }
+
+    .container__imagem{
+      width: 50vw;
+    }
+
+    .container__caixa{
+      margin: 2em 2em;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .rodape{
+      width: 100%; height: 60%;
+    }
+  }
+
